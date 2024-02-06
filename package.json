@@ -1,0 +1,16 @@
+{
+  "name": "openclassroomproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "compile":"sass --watch oh-my-food/sass/main.scss oh-my-food/assets/style.css",
+  "compiled":"sass --watch oh-my-food/sass/pages.scss oh-my-food/assets/pages.css"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.6"
+  }
+}

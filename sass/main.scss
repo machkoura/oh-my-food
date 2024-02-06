@@ -1,0 +1,520 @@
+//import variables
+@use "../sass/variables/colors" as *;
+//import mixins
+@use "../sass/helper/mixins" as *;
+//import functions
+@use "..//sass/helper/functions" as*;
+//import style fonts for footer
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+//font for root
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  @include fonts;
+  
+}
+
+body {
+  @include centering;
+  margin: 0px;
+  .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$white;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.9;
+    animation-name:to-home-page;
+    animation-duration:0.5s;
+    animation-delay: 6s;
+    animation-fill-mode: forwards;
+    @keyframes to-home-page {
+      to{
+       z-index: -3;
+      }
+    }
+    div {
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+      background-color: orchid;
+      margin: 5px;
+      animation-name: up-and-down;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+    .two {
+      animation-delay: 0.3s;
+    }
+    .three{
+      animation-delay:0.6s ;
+    }
+    @keyframes up-and-down {
+      to {
+        opacity: 0.2;
+        transform: translateY(-20px);
+      }
+
+    }
+
+  }
+  .main-container {
+    width: 375px;
+    padding: 0px;
+    margin: 0px;
+  
+    .header {
+      @include centering;
+      background-color: $white;
+      width: 100%;
+      box-shadow: 0px 5px 8px 0px #00000026;
+      margin-bottom: 6px;
+      height: 70px;
+    }
+      .logo-mobile {
+        width: 180px;
+        height: 30px;
+      }
+      .form-search {
+        width: 100%;
+        background-color: $alt-grey;
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 6px;
+        box-shadow: 0px 6px 3px 0px #00000026;
+        .city-search {
+          border: none;
+          background-color: $alt-grey;
+          font-weight: 700;
+          font-size: 16px;
+          text-align: center;
+          width: 150px;
+        }
+      }
+    .first-one {
+      @include centering;
+      padding: 30px;
+      padding-bottom: 50px;
+      background-color: $menu-restau;
+      .head-line {
+        margin: 0px;
+        text-align: center;
+        width: 80%;
+      }
+      .sub-line {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 300;
+        color: #353535;
+        padding-bottom: 10px;
+        transition:300ms;
+      }
+      .btn-big {
+        @include big-round;
+        transition: 300ms;
+        cursor: pointer;
+        transition-timing-function: ease-out;
+      }
+      .btn-big:hover {
+        transform: scale(1.1);
+        opacity:  0.7;
+        box-shadow:  0px 4px 15px 0px #00000059;
+
+      }
+    }
+    .functions {
+      display: flex;
+      justify-self: center;
+      flex-direction: column;
+      padding: 15px;
+      background-color: $white;
+      counter-reset: number-count;
+      position: relative;
+      .title-func {
+        display: flex;
+        align-self: flex-start;
+        margin-bottom: 25px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        width: 100%;
+        @include centering;
+        flex-grow: 1;
+        li{
+          @include btn-functions;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          flex-grow: 1;
+        }
+      }
+      ul li::before {
+        content: counter(number-count);
+        counter-increment: number-count;
+        @include centering;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border: 2px solid;
+        border-radius: 50px;
+        background-color: $primary;
+        color: $white;
+        left: 10px;
+      }
+      .icone-list {
+        margin-right: 20px;
+        color: #7e7e7e;
+        font-weight: 600;
+        &--violet {
+          color: $primary;
+          margin-right: 20px;
+        }
+      }
+    }
+    .restaurant-cards {
+      background-color: $menu-restau;
+      padding: 30px 20px 60px 20px;
+      .cards {
+        @include card-img;
+        position: relative;
+        .new-one {
+          width: 20%;
+          height: 30px;
+          background-color: $badge-back;
+          border: none;
+          color: $badge-txt;
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          border-radius: 2px;
+          font-weight: 600;
+          font-size: 13px;
+        }
+        .card {
+          .card-1 {
+            @include count-style;
+            object-position: bottom;
+          }
+          .card-2 {
+            @include count-style;
+            object-position: center 60%;
+          }
+          .card-3 {
+            @include count-style;
+            object-position: bottom;
+          }
+          .card-4 {
+            @include count-style;
+            object-position: bottom;
+          }
+        }
+        .card-content {
+          display: flex;
+          justify-content: space-between;
+          margin-left: 10px;
+          margin-bottom: 15px;
+          position: relative;
+         .title {
+            margin-bottom: 0px;
+            margin-top: 10px;
+          }
+          .sub-title {
+            margin: 4px;
+          }
+          .like{
+            font-size: 25px;
+            cursor: pointer;
+            @include centering;
+            width: 60px;
+            height: 60px;
+          }
+           .like:hover {
+            font-weight: 600;
+            background-image: linear-gradient( $primary, $secondary );
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: 1s ease-out;
+          }
+        }
+      }
+    }
+    .end {
+      background-color: $footer;
+      padding: 30px;
+      height: max-content;
+     .foot-title {
+        @include fonts-footer;
+        color: $white;
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 0px;
+      }
+      .link {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        padding: 5px;
+       .foot-icone {
+         margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:376px) and (max-width: 767px) {
+  body{
+    .main-container{
+      width: 100%;
+      margin: 0px;
+      .end{
+        padding: 0px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and  (min-width:767px ) and (max-width:1024px)  {
+  body {
+    display: flex;
+    justify-content: center;
+    .main-container{
+      .header {
+        box-shadow: none;
+        height: 60px;
+      }
+      .form-search{
+        box-shadow: none;
+        margin-bottom: 0px;
+        padding: 10px 0px;
+      }
+      width:100%;
+     .first-one .btn-big.btn-round{
+        width: 20%;
+      }
+      .functions {
+        padding: 15px 50px;
+        .title-for-func {
+          margin-left: 20px;
+        }
+        ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        li {
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          position: relative;
+          margin-left: 20px;
+          .icone-list {
+            margin-left: 10px;
+            color: #7e7e7e;
+            font-weight: 600;
+            &--violet {
+              color: $primary;
+              margin-left: 10px;
+            }
+          }
+        }
+        li::before {
+          content: counter(number-count);
+          counter-increment: number-count;
+          position: absolute;
+          width: 25px;
+          height: 24px;
+          border: 2px solid;
+          border-radius: 50px;
+          background-color: #9356DC;
+          color:$white;
+          left: -12px;
+        }
+        }
+      }
+      .restaurant-cards  {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+        padding-bottom: 25px;
+        .title-section {
+          margin-left: 60px;
+          margin-bottom: 0px;
+        }
+        .all-cards{
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          margin-top: 10px;
+          width: 100%;
+          .cards {
+            width: 40%;
+            transition: 1s ease-out;
+            position: relative;
+            .card{
+              .card-1 ,.card-2 ,.card-3,.card-4{
+                width: 100%;
+                height: 140px;
+                object-fit: cover;
+                object-position: center 65%;
+                }
+               .card-2{
+                object-fit: cover;
+                object-position: center 55%;
+              }
+              }
+          }
+          .cards:hover{
+            transform: scale(1.1);
+          }
+        }
+      }
+      .end{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: end;
+        padding:40px 0px 20px 0px;
+        .foot-title {
+          margin-right: 40px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+        .link-footer{
+          display: flex;
+          order: 1;
+        }
+        .link-footer-2 {
+          display: flex;
+          margin-left:25px ;
+          margin-right: 20px;
+        }
+        .link {
+          font-weight: 200;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width:1025px)  {
+  body {
+    display: flex;
+    justify-content: center;
+    .main-container{
+      .form-search{
+        box-shadow: none;
+        margin-bottom: 0px;
+        padding: 10px 0px;
+      }
+      width:100%;
+      .first-one .btn-big.btn-round{
+        width: 20%;
+      }
+      .functions {
+       width: 80%;
+       margin: auto;
+        
+        ul {
+          display: flex;
+          flex-direction: row;
+          li {
+        
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          position: relative;
+          flex-grow: 0;
+          margin-right: 20px;
+          }
+          li::before {
+            content: counter(number-count);
+            counter-increment: number-count;
+            position: absolute;
+            width: 28px;
+            height: 27px;
+            border: 2px solid;
+            border-radius: 50px;
+            background-color: #9356DC;
+            color:$white;
+            left: -14px;
+          }
+        }
+      }
+      .restaurant-cards  {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 30px 0px;
+        .title-section {
+          width: 80%;
+          margin: auto;
+        }
+       .all-cards{
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          width: 100%;
+          .cards {
+            width: 35%;
+            transition: 1s ease-out;
+            position: relative;
+            .card{
+              .card-1 ,.card-2 ,.card-3,.card-4 {
+                width: 100%;
+                height: 170px;
+                object-fit: cover;
+                object-position: center 66%
+              }
+              .card-2{
+                object-fit: cover;
+                object-position: center 58% ;
+              }
+            }
+          }
+          .cards:hover{
+            transform: scale(1.1);
+          }
+        }
+      }
+      .end{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        align-items: end;
+        padding:40px 0px 20px 0px;
+        .foot-title {
+          margin-right: 40px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+        .link-footer{
+          display: flex;
+          order: 1;
+        }
+        .link-footer-2 {
+          display: flex;
+          margin-left:25px ;
+          margin-right: 20px;
+        }
+        .link {
+          font-weight: 200;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
