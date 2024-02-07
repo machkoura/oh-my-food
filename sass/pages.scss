@@ -81,13 +81,13 @@ body{
               margin-left: 10px;
             }
             .heart-color:hover{
-              font-weight: 600;
               background-image: linear-gradient( $primary, $secondary );
               -webkit-background-clip: text;
               background-clip: text;
               color: transparent;
+              font-weight: 600;
               cursor: pointer;
-              @include centering;
+              transition: 1s ;
             }
           }
           .box-card-title {
@@ -258,6 +258,7 @@ body{
               justify-content: center;
               align-items: center;
               .for-title {
+                padding: 0px;
                 .menu-title {
                   width: 100%;
                 }
@@ -291,28 +292,25 @@ body{
         flex-direction: row-reverse;
         justify-content: end;
         align-items: end;
-        padding: 40px 0px 20px 0px;
+        padding:40px 0px 20px 0px;
         .foot-title {
-          margin-right: 40px;
-          margin-left: 10px;
+          margin-right: 70px;
           margin-top: 0px;
-          margin-bottom: 10px;
+          margin-bottom: 0px;
         }
         .link-footer{
           display: flex;
-          margin-right: 10px;
-          margin-bottom: 10px;
           order: 1;
+          margin-right: 20px;
         }
         .link-footer-2 {
           display: flex;
-          margin-left:10px ;
-          margin-right: 20px;
-          margin-bottom: 10px;
+          margin-left:25px ;
+          margin-right: 50px;
         }
         .link {
-          font-weight: 300;
-          font-size: 14px;
+          font-weight: 200;
+          font-size: 13px;
         }
       }
     }
@@ -358,6 +356,7 @@ body{
               align-items: center;
               padding-top: 40px;
               .for-title {
+                width: 250px;
                 .menu-title {
                   width: 100%;
                 }
@@ -394,22 +393,24 @@ body{
         align-items: end;
         padding:40px 0px 20px 0px;
         .foot-title {
-          margin-right: 40px;
+          margin-right: 80px;
           margin-top: 0px;
           margin-bottom: 0px;
         }
         .link-footer{
           display: flex;
           order: 1;
+          margin-right: 20px;
         }
         .link-footer-2 {
           display: flex;
           margin-left:25px ;
-          margin-right: 20px;
+          margin-right: 80px;
         }
         .link {
           font-weight: 200;
           font-size: 15px;
+          margin-right: 10px;
         }
       }
     }
