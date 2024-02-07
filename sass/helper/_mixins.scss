@@ -12,7 +12,7 @@
     font-family:  'Shrikhand', serif;
 }
 @mixin big-round {
-    border-radius: 30px;
+    border-radius: 25px;
     background-image:  linear-gradient(to top left  , #9356DC    , #FF79DA 100% );
     -webkit-box-shadow: 0px 10px 20px 8px rgba(0,0,0,0.2);
     box-shadow: 0px 10px 20px 8px rgba(0,0,0,0.2);;

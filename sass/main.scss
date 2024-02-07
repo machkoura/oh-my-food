@@ -28,8 +28,8 @@ body {
     z-index: 1;
     opacity: 0.9;
     animation-name:to-home-page;
-    animation-duration:0.5s;
-    animation-delay: 6s;
+    animation-duration:2s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
     @keyframes to-home-page {
       to{
@@ -299,10 +299,9 @@ body {
         width: 20%;
       }
       .functions {
-        padding: 15px 50px;
-        .title-for-func {
-          margin-left: 20px;
-        }
+        width: 90%;
+        margin: auto;
+        padding-top: 20px;
         ul {
         display: flex;
         flex-direction: row;
@@ -314,7 +313,7 @@ body {
           align-items: center;
           font-size: 14px;
           position: relative;
-          margin-left: 20px;
+          margin-right: 20px;
           .icone-list {
             margin-left: 10px;
             color: #7e7e7e;
@@ -414,7 +413,6 @@ body {
       .form-search{
         box-shadow: none;
         margin-bottom: 0px;
-        padding: 10px 0px;
       }
       width:100%;
       .first-one .btn-big.btn-round{
@@ -423,6 +421,7 @@ body {
       .functions {
        width: 80%;
        margin: auto;
+       padding-top: 40px;
         ul {
           display: flex;
           flex-direction: row;

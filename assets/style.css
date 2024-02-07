@@ -22,8 +22,8 @@ body .loader {
   z-index: 1;
   opacity: 0.9;
   animation-name: to-home-page;
-  animation-duration: 0.5s;
-  animation-delay: 6s;
+  animation-duration: 2s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 @keyframes to-home-page {
@@ -115,7 +115,7 @@ body .main-container .first-one .sub-line {
   transition: 300ms;
 }
 body .main-container .first-one .btn-big {
-  border-radius: 30px;
+  border-radius: 25px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA 100%);
   -webkit-box-shadow: 0px 10px 20px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 10px 20px 8px rgba(0, 0, 0, 0.2);
@@ -344,10 +344,9 @@ body .main-container .end .link .foot-icone {
     width: 20%;
   }
   body .main-container .functions {
-    padding: 15px 50px;
-  }
-  body .main-container .functions .title-for-func {
-    margin-left: 20px;
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
   }
   body .main-container .functions ul {
     display: flex;
@@ -361,7 +360,7 @@ body .main-container .end .link .foot-icone {
     align-items: center;
     font-size: 14px;
     position: relative;
-    margin-left: 20px;
+    margin-right: 20px;
   }
   body .main-container .functions ul li .icone-list {
     margin-left: 10px;
@@ -458,7 +457,6 @@ body .main-container .end .link .foot-icone {
   body .main-container .form-search {
     box-shadow: none;
     margin-bottom: 0px;
-    padding: 10px 0px;
   }
   body .main-container .first-one .btn-big.btn-round {
     width: 20%;
@@ -466,6 +464,7 @@ body .main-container .end .link .foot-icone {
   body .main-container .functions {
     width: 80%;
     margin: auto;
+    padding-top: 40px;
   }
   body .main-container .functions ul {
     display: flex;
