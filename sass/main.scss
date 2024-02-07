@@ -58,15 +58,12 @@ body {
         opacity: 0.2;
         transform: translateY(-20px);
       }
-
     }
-
   }
   .main-container {
     width: 375px;
     padding: 0px;
     margin: 0px;
-  
     .header {
       @include centering;
       background-color: $white;
@@ -426,12 +423,10 @@ body {
       .functions {
        width: 80%;
        margin: auto;
-        
         ul {
           display: flex;
           flex-direction: row;
           li {
-        
           height: 50px;
           display: flex;
           justify-content: center;
