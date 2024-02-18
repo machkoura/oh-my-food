@@ -410,13 +410,30 @@ body {
     display: flex;
     justify-content: center;
     .main-container{
+      width:100%;
+      .header{
+        height: 80px;
+      }
       .form-search{
         box-shadow: none;
         margin-bottom: 0px;
+
       }
-      width:100%;
-      .first-one .btn-big.btn-round{
-        width: 20%;
+      .first-one {
+        .head-line{
+          font-size: 47px;
+          margin-bottom: 15px;
+        }
+        .sub-line{
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+       .btn-big{
+        width: 300px;
+        height: 70px;
+        font-size: 20px;
+        border-radius: 30px;
+       }
       }
       .functions {
        width: 80%;
