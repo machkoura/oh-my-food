@@ -6,7 +6,6 @@
 }
 @mixin fonts{
      font-family: 'Roboto', sans-serif;
- 
 }
 @mixin fonts-footer{
     font-family:  'Shrikhand', serif;
@@ -21,6 +20,7 @@
     color: white;
     font-size: 16px;
 }
+
 @mixin btn-functions{
     border-radius: 20px;
     display: flex;
