@@ -17,6 +17,7 @@ body{
   flex-direction: column;
   margin: 0px;
   padding: 0px;
+ 
   .the-container {
     width: 375px;
     .header {
@@ -227,9 +228,16 @@ body{
       width: 100%;
       justify-content: center;
       .header {
-        .logo-img {
-          margin-bottom: 0px;
-          box-shadow: none;
+        height: 80px;
+        margin-bottom: 0px;
+        box-shadow: none;
+        .box-logo {
+          margin: auto;
+          width: auto;
+          .logo-mobile {
+            width: 200px;
+            margin-right: 80px;
+          }
         }
       }
       main {
@@ -320,14 +328,21 @@ body{
   }
 }
 
-@media  screen and (min-width:1025px) and (max-width:1440px) {
+@media  screen and (min-width:1025px)  {
   body {
     .the-container {
       width: 100%;
       .header {
-        .logo-img {
-          margin-bottom: 0px;
-          box-shadow: none;
+        height: 80px;
+        margin-bottom: 0px;
+        box-shadow: none;
+        .box-logo {
+          margin: auto;
+          width: auto;
+          .logo-mobile {
+            width: 200px;
+            margin-right: 70px;
+          }
         }
       }
       main {
