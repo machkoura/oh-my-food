@@ -1,9 +1,9 @@
 //import variables
-@use "../sass/variables/colors" as *;
+@use "variables/colors" as *;
 //import mixins
-@use "../sass/helper/mixins" as *;
-//import functions
-@use "..//sass/helper/functions" as*;
+@use "helper/mixins" as *;
+
+
 //import style fonts for footer
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 //font for root

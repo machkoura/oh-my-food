@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "compile":"sass --watch oh-my-food/sass/main.scss oh-my-food/assets/style.css",
-  "compiled":"sass --watch oh-my-food/sass/pages.scss oh-my-food/assets/pages.css"
+  "compile":" sass --watch  sass/main.scss  assets/style.css",
+  "compiled":"sass --watch sass/pages.scss  assets/pages.css"
 
   },
   "author": "",
