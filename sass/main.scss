@@ -17,6 +17,7 @@
 body {
   @include centering;
   margin: 0px;
+  //loader page d'accueil
   .loader {
     display: flex;
     justify-content: center;
@@ -59,6 +60,7 @@ body {
         transform: translateY(-20px);
       }
     }
+    //fin d'animation du loader
   }
   .main-container {
     width: 375px;
@@ -150,7 +152,7 @@ body {
           justify-content: center;
           align-items: center;
           font-size: 18px;
-          flex-grow: 1;
+          flex-grow: 1; 
         }
       }
       ul li::before {
@@ -226,6 +228,7 @@ body {
           .sub-title {
             margin: 4px;
           }
+          //Animation du coeur
           .like{
             font-size: 25px;
             cursor: pointer;
