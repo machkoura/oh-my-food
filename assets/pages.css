@@ -100,7 +100,7 @@ body .the-container main .first-card .box-card-title .card-title {
   width: 10%;
   padding-bottom: 4px;
 }
-body .the-container main .first-card .cards {
+body .the-container main .cards {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -111,10 +111,10 @@ body .the-container main .first-card .cards {
   height: 70px;
   cursor: pointer;
 }
-body .the-container main .first-card .cards .menu {
+body .the-container main .cards .menu {
   padding: 10px;
 }
-body .the-container main .first-card .cards .txt-title {
+body .the-container main .cards .txt-title {
   margin: 0px;
   margin-bottom: 10px;
   font-size: 18px;
@@ -122,26 +122,26 @@ body .the-container main .first-card .cards .txt-title {
   overflow: visible;
   width: 200px;
 }
-body .the-container main .first-card .cards .desc-txt {
+body .the-container main .cards .desc-txt {
   margin: 0px;
   font-size: 15px;
   width: 200px;
   white-space: nowrap;
   overflow: visible;
 }
-body .the-container main .first-card .cards .price-box {
+body .the-container main .cards .price-box {
   display: flex;
   height: 100%;
   cursor: pointer;
 }
-body .the-container main .first-card .cards .price-box .price {
+body .the-container main .cards .price-box .price {
   font-weight: 600;
   font-size: 15px;
   align-self: flex-end;
   padding-bottom: 10px;
   margin-right: 10px;
 }
-body .the-container main .first-card .cards .price-box .show-price {
+body .the-container main .cards .price-box .show-price {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +154,7 @@ body .the-container main .first-card .cards .price-box .show-price {
   overflow: hidden;
   cursor: pointer;
 }
-body .the-container main .first-card .cards .price-box .show-price .click-appear {
+body .the-container main .cards .price-box .show-price .click-appear {
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -162,26 +162,26 @@ body .the-container main .first-card .cards .price-box .show-price .click-appear
   align-items: center;
   color: #FFFFFF;
 }
-body .the-container main .first-card .cards:hover .show-price {
+body .the-container main .cards:hover .show-price {
   width: 60px;
   transition: 1s;
 }
-body .the-container main .first-card .cards:hover .desc-txt {
+body .the-container main .cards:hover .desc-txt {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-body .the-container main .first-card .cards:hover .txt-title {
+body .the-container main .cards:hover .txt-title {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-body .the-container main .first-card .choose-it {
+body .the-container main .choose-it {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
 }
-body .the-container main .first-card .choose-it .choose {
+body .the-container main .choose-it .choose {
   border-radius: 25px;
   background-image: linear-gradient(to top left, #9356DC, #FF79DA 100%);
   -webkit-box-shadow: 0px 10px 20px 8px rgba(0, 0, 0, 0.2);
@@ -195,10 +195,126 @@ body .the-container main .first-card .choose-it .choose {
   transition-timing-function: ease-out;
   width: 200px;
 }
-body .the-container main .first-card .choose-it .choose:hover {
+body .the-container main .choose-it .choose:hover {
   transform: scale(1.1);
   opacity: 0.9;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
+}
+body .the-container main .entries {
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-name: first-meal;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+body .the-container main .entries .one {
+  visibility: visible;
+}
+body .the-container main .entries .box-card-title {
+  animation-name: first-meal;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+body .the-container main .entries .cards:nth-of-type(1) {
+  animation-name: first-meal;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.7s;
+  animation-fill-mode: forwards;
+}
+body .the-container main .entries .cards:nth-of-type(2) {
+  animation-name: first-meal;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+body .the-container main .entries .cards:nth-of-type(3) {
+  animation-name: first-meal;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes first-meal {
+  to {
+    visibility: visible;
+    animation-duration: 4s;
+  }
+}
+body .the-container main .dishes {
+  animation-duration: 8s;
+  animation-delay: 8s;
+  animation-name: firstofdishes;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+body .the-container main .dishes .box-card-title {
+  animation-name: firstofdishes;
+  animation-duration: 1s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+body .the-container main .dishes .cards:nth-of-type(1) {
+  animation-name: firstofdishes;
+  animation-timing-function: ease-in-out;
+  animation-delay: 5.5s;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+body .the-container main .dishes .cards:nth-of-type(2) {
+  animation-name: firstofdishes;
+  animation-delay: 6.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+body .the-container main .dishes .cards:nth-of-type(3) {
+  animation-name: firstofdishes;
+  animation-delay: 7.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes firstofdishes {
+  to {
+    opacity: 1;
+    animation-duration: 9s;
+  }
+}
+body .the-container main .desserts {
+  animation-duration: 11s;
+  animation-delay: 12s;
+  animation-name: show-desserts;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+body .the-container main .desserts .box-card-title {
+  animation-name: show-desserts;
+  animation-duration: 1s;
+  animation-delay: 8.3s;
+  animation-fill-mode: forwards;
+}
+body .the-container main .desserts .cards:nth-of-type(1) {
+  animation: show-desserts;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+body .the-container main .desserts .cards:nth-of-type(2) {
+  animation: show-desserts;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+body .the-container main .desserts .cards:nth-of-type(3) {
+  animation: show-desserts;
+  animation-delay: 11s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes show-desserts {
+  to {
+    visibility: visible;
+    animation-duration: 12s;
+    transition: ease-out;
+  }
 }
 body .the-container .end {
   background-color: #353535;
