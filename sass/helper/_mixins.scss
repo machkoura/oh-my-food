@@ -1,16 +1,16 @@
-@mixin centering {
+  @mixin centering {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-@mixin fonts{
-     font-family: 'Roboto', sans-serif;
-}
-@mixin fonts-footer{
+  }
+  @mixin fonts{
+    font-family: 'Roboto', sans-serif;
+  }
+  @mixin fonts-footer{
     font-family:  'Shrikhand', serif;
-}
-@mixin big-round {
+  }
+  @mixin big-round {
     border-radius: 25px;
     background-image:  linear-gradient(to top left  , #9356DC    , #FF79DA 100% );
     -webkit-box-shadow: 0px 10px 20px 8px rgba(0,0,0,0.2);
@@ -19,9 +19,9 @@
     border: none;
     color: white;
     font-size: 16px;
-}
+  }
 
-@mixin btn-functions{
+  @mixin btn-functions{
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -32,8 +32,8 @@
     padding: 10px;
     margin-bottom: 25px;
     box-shadow: 0px 4px 15px 0px #00000026;
-}
-@mixin card-img {
+  }
+  @mixin card-img {
     width: 100%;
     background-color: white;
     border-radius: 20px 20px 20px 20px;
@@ -43,9 +43,9 @@
     text-decoration: none;
     color: inherit;
     margin-top: 15px;
-}
+  }
 
-@mixin count {
+  @mixin count {
     content: counter(members-counter );
     position: absolute;
     width: 24px;
@@ -64,7 +64,7 @@
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
   }
-@mixin clic-resto {
+  @mixin clic-resto {
     width: 30%;
     height: 30px;
     background-color: $badge-back;
@@ -72,129 +72,44 @@
     color: $badge-txt;
     position: absolute;
     border-radius: 2px;
-}
+  }
 
-@mixin animation-entries{
-  animation-duration:2s;
-  animation-delay: 4s;
-  animation-name:first-meal;
-  visibility: hidden;
-  animation-fill-mode:forwards;
- 
-  .box-card-title{
-    animation-name:first-meal;
-    animation-duration: 1s;
+  @mixin animation-entries{
+    animation-duration:3s;
     animation-delay: 1s;
-    animation-fill-mode: forwards;
-  }
-  .cards:nth-of-type(1){
     animation-name:first-meal;
-    animation-timing-function:ease-in-out;
-    animation-delay: 1.7s;
-    animation-fill-mode: forwards;
-  }
-  .cards:nth-of-type(2){
-    animation-name:first-meal;
-    animation-delay: 2.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function:ease-in-out;
-  }
-  .cards:nth-of-type(3){
-    animation-name: first-meal;
-    animation-delay:3.5s;
-    animation-fill-mode: forwards;
-    animation-timing-function:ease-in-out;
-  }
-  @keyframes first-meal {
-    to{
-      visibility:visible;
-      animation-duration: 4s;
-    }
-  }
-}
-
-
-
-
-
-
- @mixin animation-dishes {
-    animation-duration:8s;
-    animation-delay: 8s;
-    animation-name: firstofdishes;
-   opacity: 0;
-    animation-fill-mode: forwards;
-    .box-card-title{
-      animation-name: firstofdishes;
-      animation-duration: 1s;
-      animation-delay: 4.5s;
-      animation-fill-mode: forwards;
-    }
-    .cards:nth-of-type(1) {
-      animation-name: firstofdishes;
-      animation-timing-function:ease-in-out;
-      animation-delay: 5.5s;
-      animation-fill-mode: forwards;
-     
-      animation-duration: 2s;
-    }
-    .cards:nth-of-type(2){
-      animation-name: firstofdishes;
-      animation-delay: 6.5s;
-      animation-fill-mode: forwards;
-      animation-timing-function:ease-in-out;
-     }
-     .cards:nth-of-type(3){
-      animation-name: firstofdishes;
-      animation-delay:7.5s;
-      animation-fill-mode: forwards;
-      animation-timing-function:ease-in-out;
-     }
-      @keyframes firstofdishes {
-       to{
-       opacity: 1;
-        animation-duration: 9s;
-        }
+    opacity: 0;
+    animation-fill-mode:forwards;
+    transition-timing-function: ease-in-out;
+    @keyframes first-meal {
+      to{
+        opacity: 1;
       }
+    }
   }
-
-  @mixin animation-desserts{
-    animation-duration:11s;
-    animation-delay: 12s;
-    animation-name: show-desserts;
-    visibility: hidden;
+  @mixin animation-dishes {
+    animation-duration:3s;
+    animation-delay: 2s;
+    animation-name: firstofdishes;
+    opacity: 0;
     animation-fill-mode: forwards;
- 
-    .box-card-title{
-      animation-name: show-desserts;
-      animation-duration: 1s;
-      animation-delay: 8.3s;
-      animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    @keyframes firstofdishes {
+      to{
+         opacity: 1;
+        }
     }
-    .cards:nth-of-type(1){
-      animation: show-desserts;
-      animation-delay: 9s;
-      animation-fill-mode: forwards;
-      animation-timing-function:ease-in-out;
-   
-    }
-    .cards:nth-of-type(2){
-      animation: show-desserts;
-      animation-delay: 10s;
-      animation-fill-mode: forwards;
-      animation-timing-function:ease-in-out;
-    }
-    .cards:nth-of-type(3){
-      animation: show-desserts;
-      animation-delay: 11s;
-      animation-fill-mode: forwards;
-      animation-timing-function:ease-in-out;
-    }
+  }
+  @mixin animation-desserts{
+    animation-duration:3s;
+    animation-delay: 3s;
+    animation-name: show-desserts;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
     @keyframes show-desserts {
       to{
-        visibility: visible;
-        animation-duration: 12s;
-        transition:ease-out;
+        opacity: 1;
       }
     }
   }
